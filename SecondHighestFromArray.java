@@ -1,8 +1,12 @@
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class SecondHighestFromArray {
     public static void main(String[] args) {
-        int arr[] = {23, 37, 4, 52, 6, 77, 890, 890};
+        // int arr[] = {23, 37, 4, 52, 6, 77, 890, 890};
+
+        List<Integer> list = Arrays.asList(2, 3, 4, 5, 6, 7, 8, 9);
 
 //        Doing it with Sorting method
 //        int len = arr.length;
@@ -33,8 +37,10 @@ public class SecondHighestFromArray {
 //        }
 //        System.out.println(second_largest);
 
+        // int secondHighest = list.stream().sorted(Collections.reverseOrder()).distinct().skip(1).findFirst().get();
+        // System.out.println(secondHighest);
 
-//        int secondHighest = Arrays.stream(arr).reverseOrder
-
+        int secondLowest = list.stream().sorted().distinct().skip(1).findFirst().get();
+        System.out.println(secondLowest);
     }
 }

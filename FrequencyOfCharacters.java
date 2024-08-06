@@ -6,7 +6,12 @@ public class FrequencyOfCharacters {
         str = str.toLowerCase();
         for (char ch = 'a'; ch <= 'z'; ch++) {
             int c = 0;
-            f
+            for (int i = 0; i < str.length(); i++) {
+                if (ch == str.charAt(i))
+                    c++;
+            }
+            if (c != 0)
+                System.out.println(ch + " : " + c);
         }
 
     }
